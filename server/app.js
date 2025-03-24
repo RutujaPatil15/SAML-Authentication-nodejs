@@ -32,7 +32,7 @@ passport.use(
 passport.use(new SamlStrategy(
   {
     path: process.env.SAML_PATH || '/login/callback',
-    entryPoint: process.env.SAML_ENTRY_POINT || '',
+    entryPoint: process.env.SAML_ENTRY_POINT || 'Paste your entrypoint here',
     issuer: 'passport-saml',
     cert: fs.readFileSync('samlssocert.pem', 'utf8')
   },
